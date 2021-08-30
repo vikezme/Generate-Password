@@ -33,6 +33,7 @@ function generatePassword() {
   if (includeLowercase === true) {
     var randomIndex = randomNumberGenerator(0, lowercaseChar.length)
     password += lowercaseChar[randomIndex]
+    
   }
   if (includeUppercase === true) {
     var randomIndex2 = randomNumberGenerator(0, uppercaseChar.length)
