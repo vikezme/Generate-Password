@@ -7,7 +7,7 @@ var lowercaseChar = "abcdefghijklmnopqrstuvwxyz";
 var uppercaseChar = "ABCDEFGHIJKLMNOPQRSTUZWXYZ";
 var numericalChar = "0123456789";
 var specialChar = "!#$%&'()*+-./:;<=>?@[\^_`{|}~";
-var allChar ="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUZWXYZ0123456789!#$%&'()*+-./:;<=>?@[\^_`{|}~"
+var allChar ="";
 
 function randomNumberGenerator(min, max) {
   const num = Math.floor(Math.random() * (max - min + 1)) + min;
@@ -33,21 +33,28 @@ function generatePassword() {
   if (includeLowercase ) {
     var randomIndex = randomNumberGenerator(0, lowercaseChar.length)
     password += lowercaseChar[randomIndex]
-  
+    allChar="abcdefghijklmnopqrstuvwxyz"
+    console.log(password);
+
   }
   if (includeUppercase ) {
     var randomIndex2 = randomNumberGenerator(0, uppercaseChar.length)
     password += uppercaseChar[randomIndex2]
-
+    allChar="ABCDEFGHIJKLMNOPQRSTUZWXYZ"
+    console.log(password);
   }
   if (includeNumbers ) {
     var randomIndex3 = randomNumberGenerator(0, numericalChar.length)
     password += numericalChar[randomIndex3]
+    allChar="0123456789"
+    console.log(password);
 
   }
   if (includeSpecialcharacters ) {
     var randomIndex4 = randomNumberGenerator(0, specialChar.length)
     password += specialChar[randomIndex4]
+    allChar="!#$%&'()*+-./:;<=>?@[\^_`{|}~"
+    console.log(password);
 
   }
 

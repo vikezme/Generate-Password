@@ -1,4 +1,5 @@
 # Generate-Password
+
 Description
 
 A JavaScript app that can be used to generate passwords with special characters, numbers, lowercase letters, and/or uppercase letters.
